@@ -1,6 +1,6 @@
 # Reconfiguration-Robust Dynamic EVHC
 
-Official repository for the paper:
+Official repository for the paper accepted in IEEE WCCI 2026:
 
 **Reconfiguration-Robust Spatiotemporal Learning for Dynamic EV Hosting Capacity Estimation in Distribution Feeders**
 
@@ -97,15 +97,16 @@ The full dataset and trained models exceed convenient GitHub size limits. The se
 - Zenodo: full data, trained models, and archival release
 
 
+## Citation and archive
 
-After creating a public GitHub release, archive that release with Zenodo and replace the placeholders below.
+The full reproducibility package for this project is archived on Zenodo:
+[<ZENODO_REPRO_DOI>](https://doi.org/https://doi.org/10.5281/zenodo.19491863)
 
-## Citation and archival release
+The source code repository is available on GitHub:
+[<GITHUB_REPO_URL>](https://github.com/MdTouhidulHaque/reconfig-robust-dynamic-evhc)
 
-Replace the placeholders in `CITATION.cff` after creating the public release.
-
-GitHub repository: `REPLACE_WITH_GITHUB_URL`  
-Zenodo DOI: `REPLACE_WITH_ZENODO_DOI`
+Software-only Zenodo archive for the GitHub release:
+[<ZENODO_SOFTWARE_DOI>](https://doi.org/10.5281/zenodo.19491494)
 
 ## License split
 
@@ -124,12 +125,4 @@ In particular, the OpenDSS feeder model under `data/raw/dss_model/` and `data/ra
 - `data/raw/dss_model/README_source.md`
 
 Users of those files should follow the original source attribution and any applicable reuse terms.
-
-
-
-## Reproducibility note for the paper
-
-A suitable camera-ready sentence is:
-
-> Code, data, and trained models for this study are publicly available at [GitHub link], with an archived release at [Zenodo DOI].
 
