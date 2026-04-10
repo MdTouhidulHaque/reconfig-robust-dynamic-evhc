@@ -1,0 +1,42 @@
+model_name: 3d_ecgat
+script: scripts/05_train_3d_ecgat.py
+output_dir: models/3d_ecgat
+
+protocol:
+  train_scenarios: [base, s1, s2]
+  val_scenarios: [s3]
+  test_scenarios: [s4, s5]
+  total_steps: 8760
+  window: 24
+  train_end: 6137
+  val_end: 7420
+
+training:
+  seed: 1862437
+  batch_size: 4
+  epochs: 120
+  learning_rate: 0.0002
+  weight_decay: 0.0001
+  patience: 12
+  num_workers: 0
+  pin_memory: true
+
+loss:
+  type: smooth_l1
+  use_huber: true
+  huber_beta: 1.0
+
+normalization:
+  eps_std: 1.0e-6
+  zclip: 6.0
+  scaler_file: models/3d_ecgat/scalers_node_edge_protocol_b.npz
+
+architecture:
+  hidden_dim: 64
+  num_heads: 4
+  num_layers: 2
+  residual_scale: 0.3
+
+expected_outputs:
+  - models/3d_ecgat/scalers_node_edge_protocol_b.npz
+  - models/3d_ecgat/3d_ecgat_protocol_b_w24_best_state_dict.pt

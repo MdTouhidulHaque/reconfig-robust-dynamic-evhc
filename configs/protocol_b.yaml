@@ -1,0 +1,20 @@
+name: protocol_b
+description: >
+  Unseen-topology and unseen-time evaluation protocol used in the paper.
+  Training uses base, s1, and s2. Validation uses s3. Testing uses s4 and s5.
+
+scenario_split:
+  train: [base, s1, s2]
+  validation: [s3]
+  test: [s4, s5]
+
+time_split:
+  total_steps: 8760
+  window: 24
+  train_end: 6137
+  val_end: 7420
+  test_start: 7444
+
+notes:
+  - total_steps assumes one year of hourly data.
+  - test_start = val_end + window.

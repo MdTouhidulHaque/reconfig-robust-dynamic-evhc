@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "Reconfiguration-Robust Dynamic EVHC"
+message: "Please update the author list, repository URL, and DOI before publishing."
+type: software
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+repository-code: "REPLACE_WITH_GITHUB_URL"
+abstract: "Code, data packaging, and evaluation assets for reconfiguration-robust dynamic EV hosting capacity estimation in distribution feeders."
+keywords:
+  - electric vehicle
+  - hosting capacity
+  - distribution systems
+  - graph neural network
+  - reconfiguration
+license: "MIT"
+version: "1.0.0"
+date-released: 2026-01-01

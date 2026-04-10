@@ -1,0 +1,11 @@
+numpy==2.0.0
+pandas==2.2.2
+matplotlib==3.9.0
+h5py==3.12.1
+networkx==3.4.2
+PyYAML==6.0.2
+tqdm==4.64.1
+scipy==1.14.0
+torch==2.7.0
+torch-geometric==2.6.1
+pywin32==310

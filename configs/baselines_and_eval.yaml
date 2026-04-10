@@ -1,0 +1,53 @@
+dnn_baseline:
+  script: scripts/06_train_dnn_baseline.py
+  output_dir: models/dnn_baseline
+  seed: 1862437
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.001
+  hidden_dim: 1024
+  dropout: 0.3
+  use_topology: true
+  huber_beta: 1.0
+  expected_outputs:
+    - models/dnn_baseline/scaler_dnn_protocol_b.npz
+    - models/dnn_baseline/best_dnn_protocol_b.pt
+
+lstm_baseline:
+  script: scripts/07_train_lstm_baseline.py
+  output_dir: models/lstm_baseline
+  seed: 1862437
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  patience: 15
+  clip_norm: 2.0
+  huber_beta: 1.0
+  lstm_hidden: 128
+  lstm_layers: 2
+  dropout: 0.05
+  use_global_context: true
+  use_bus_embedding: true
+  bus_embedding_dim: 16
+  use_temporal_attention: true
+  use_softplus_output: true
+  add_time_features: true
+  expected_outputs:
+    - models/lstm_baseline/scaler_lstm_protocol_b.npz
+    - models/lstm_baseline/best_lstm_protocol_b.pt
+
+evaluation:
+  script: scripts/08_evaluate_models.py
+  default_checkpoint: models/3d_ecgat/3d_ecgat_protocol_b_w24_best_state_dict.pt
+  default_scaler: models/3d_ecgat/scalers_node_edge_protocol_b.npz
+  output_directory_current_script: results_protocol_b
+  recommended_public_output_directory: results/protocol_b
+  all_scenarios: [base, s1, s2, s3, s4, s5]
+  weekly_overlay_scenarios: [s4, s5]
+  weekly_overlay_bus_ids: [1011, 2028, 3147]
+  metrics_file_pattern: metrics_per_scenario_*.csv
+  figure_patterns:
+    - node_MAE_map_*.pdf
+    - weekly_overlay_*.pdf
