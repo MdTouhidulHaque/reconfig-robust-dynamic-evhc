@@ -159,3 +159,11 @@ The public `requirements.txt` is intentionally lean and paper-specific.
 
 The preprocessing and simulation stages use OpenDSS and Windows-oriented dependencies. If a reader wants to rerun the full pipeline, they will need a compatible Windows/OpenDSS setup.
 
+## Permanent archive
+
+The archived reproducibility package associated with this repository is available at:
+[<ZENODO_REPRO_DOI>](https://doi.org/https://doi.org/10.5281/zenodo.19491863)
+
+If a separate GitHub release archive was created through Zenodo, it is available at:
+[<ZENODO_SOFTWARE_DOI>](https://doi.org/10.5281/zenodo.19491494)
+
