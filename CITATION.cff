@@ -3,16 +3,21 @@ title: "Reconfiguration-Robust Dynamic EVHC"
 message: "Please update the author list, repository URL, and DOI before publishing."
 type: software
 authors:
-  - family-names: "TODO"
-    given-names: "TODO"
-repository-code: "REPLACE_WITH_GITHUB_URL"
+  - family-names: Haque, Musilek
+    given-names: Md Touhidul, Petr
 abstract: "Code, data packaging, and evaluation assets for reconfiguration-robust dynamic EV hosting capacity estimation in distribution feeders."
 keywords:
   - electric vehicle
   - hosting capacity
   - distribution systems
   - graph neural network
-  - reconfiguration
+  - grid reconfiguration
 license: "MIT"
 version: "1.0.0"
-date-released: 2026-01-01
+date-released: 2026-04-10
+
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19491863
+repository-code: <GITHUB_REPO_URL>
+url: https://github.com/MdTouhidulHaque/reconfig-robust-dynamic-evhc
